@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width:300px;
+            
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-left: 40%;
+            margin-top: 10%;
+            padding: 10px 5px 10px 20px;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .card button{
+            background-color: blue;
+            color: white   ;
+            padding: 5px 10px;
+            border: none;
+        }
+        img{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-left: 25px;
+        }
+        .sagar1{
+            display: flex;
+            gap: 10px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <div class="sagar1">
+        
+        <img src="sss.jpg" alt="shashankimage"><h1>Shashank S </h1>
+       </div>
+        <p>this is my territory</p>
+        
+        <br>
+        <audio   class="audio1"  style="display: none;" >
+            <source src="C:\Users\Naveen K M\Desktop\sagar.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="toggleSagar()">Follow</button>
+        <p class="message" style="display: none;">You are now following <strong>Shashank S</strong></p>
+    </div>
+    
+    <script>
+        function toggleSagar(){
+            var button = document.querySelector('.card button');
+            if(button.innerHTML === 'Follow'){
+                button.innerHTML = 'UnFollow';
+                var message = document.querySelector('.message');
+                var audio1 = document.querySelector('.audio1');
+                audio1.style.display = 'block';
+                audio1.play();
+               
+                message.style.display = 'block';
+
+                button.style.backgroundColor = 'green';
+            }else{
+                var message = document.querySelector('.message');
+                message.style.display = 'none';
+                button.innerHTML = 'Follow';
+                var audio1 = document.querySelector('.audio1');
+                audio1.style.display = 'none';
+                audio1.pause();
+                
+                button.style.backgroundColor = 'blue';
+            }
+        }
+    </script>
+</body>
+</html>
