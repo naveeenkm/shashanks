@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .card{
-            width:300px;
-            
-            background-color: white;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-left: 20%;
-            margin-top: 10%;
-            padding: 10px 5px 10px 20px;
-        }
+        .card {
+    width: 90%;  /* Adjust width for small screens */
+    max-width: 300px; /* Prevent it from becoming too large */
+    background-color: rgba(228, 23, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(252, 25, 25, 0.2);
+    margin: 10% auto; /* Center horizontally */
+    padding: 10px 5px 10px 20px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 80%;  /* Take more width on small screens */
+        margin: 15% auto; /* Adjust spacing */
+        padding: 15px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* Almost full width on very small screens */
+        margin: 20% auto;
+        padding: 20px;
+    }
+}
+
         .card h3 {
             margin: 10px 0;
         }
@@ -36,13 +54,7 @@
             gap: 10px;
             
         }
-         @media screen and (max-width: 600px){
-            .card{
-                width: 100%;
-                margin-left: 0;
-            }
-            
-        }
+        
     </style>
 
 </head>
